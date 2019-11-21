@@ -141,19 +141,21 @@ Or exclude countries from the list:
 phoneNumberTextField.setCountries(excluding: [.AM, .BW, .BA])
 ```
 
+You can choose to display the country list by picker or a presented view controller:
+```swift
+phoneNumberTextField.countryListDisplayMode = .picker // by default
+phoneNumberTextField.countryListDisplayMode = .presented(self)
+```
 
-## ✨ Next Improvments
-- [x] Localization
-- [x] Country search
-- [x] Placeholder
-- [x] Exclude/Include countries
-- [x] Objective-C Support
-- [x] Right-to-left
-- [ ] Any idea ?
+You can choose to display the country phone code in the picker or in the presented view controller:
+```swift
+phoneNumberTextField.showCountryPhoneCode = false // true by default
+```
+
+You can reuses `FPNCountryRepository` and `FPNSearchCountryViewController` as you want !
 
 ## ☕️ Conception
-This library is high inspired of MRCountryPicker library and use libPhoneNumber-iOS library.
-https://github.com/xtrinch/MRCountryPicker / https://github.com/iziz/libPhoneNumber-iOS
+This library uses libPhoneNumber-iOS library (https://github.com/iziz/libPhoneNumber-iOS)
 
 Open source time proudly sponsored by Chronotruck.
 
